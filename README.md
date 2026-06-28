@@ -45,7 +45,7 @@ I am a passionate **Full Stack Developer** and **AI/ML Enthusiast** studying at 
 ### 💻 Tech Stack
 
 <p align="center">
-  <img src="https://skill-icons.dev/icons?i=py,js,ts,dart,react,tailwind,fastapi,flutter,c,cpp,java,github,vscode,git,html,css" alt="My Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=py,js,ts,dart,react,tailwind,fastapi,flutter,c,cpp,java,github,vscode,git,html,css" alt="My Tech Stack" />
 </p>
 
 ---
