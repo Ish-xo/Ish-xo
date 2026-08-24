@@ -1,7 +1,5 @@
 <!-- Banner Image -->
-<p align="center">
-  <video src="https://github.com/Ish-xo/Ish-xo/raw/main/Width_cm_Height_.mp4" width="100%" autoplay loop muted playsinline></video>
-</p>
+https://github.com/Ish-xo/Ish-xo/raw/main/Width_cm_Height_.mp4
 
 <!-- Typing Animation Header -->
 <h1 align="center">
