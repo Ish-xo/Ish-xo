@@ -56,15 +56,15 @@ I am a passionate **Full Stack Developer** and **AI/ML Enthusiast** studying at 
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=Ish-xo&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" alt="GitHub Stats" width="100%"/>
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Ish-xo&theme=tokyonight" alt="GitHub Stats" width="100%"/>
       </td>
       <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ish-xo&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="100%"/>
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Ish-xo&theme=tokyonight" alt="Top Languages" width="100%"/>
       </td>
     </tr>
   </table>
   <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Ish-xo&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="100%"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Ish-xo&theme=tokyonight" alt="GitHub Profile Details" width="100%"/>
 </div>
 
 ---
