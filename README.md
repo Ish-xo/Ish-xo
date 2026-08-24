@@ -56,15 +56,24 @@ I am a passionate **Full Stack Developer** and **AI/ML Enthusiast** studying at 
   <table border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api?username=Ish-xo&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" alt="GitHub Stats" width="100%"/>
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Ish-xo&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" />
+          <img src="https://readme-stats.clckblog.space/api?username=Ish-xo&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" alt="GitHub Stats" width="100%"/>
+        </picture>
       </td>
       <td width="50%" align="center">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ish-xo&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="100%"/>
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Ish-xo&layout=compact&theme=tokyonight&hide_border=true" />
+          <img src="https://readme-stats.clckblog.space/api/top-langs/?username=Ish-xo&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" width="100%"/>
+        </picture>
       </td>
     </tr>
   </table>
   <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Ish-xo&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="100%"/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Ish-xo&theme=tokyonight&hide_border=true" />
+    <img src="https://streak-stats.demolab.com?user=Ish-xo&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="100%"/>
+  </picture>
 </div>
 
 ---
