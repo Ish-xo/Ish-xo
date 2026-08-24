@@ -1,5 +1,7 @@
 <!-- Banner Image -->
-https://github.com/Ish-xo/Ish-xo/raw/main/Width_cm_Height_.mp4
+<p align="center">
+  <img src="./github_profile_banner.gif" width="100%" alt="Ish Praful Chaniyara's Animated Banner"/>
+</p>
 
 <!-- Typing Animation Header -->
 <h1 align="center">
