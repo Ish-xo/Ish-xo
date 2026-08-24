@@ -1,6 +1,6 @@
 <!-- Banner Image -->
 <p align="center">
-  <img src="./github_profile_banner.png" width="100%" alt="Ish Praful Chaniyara's Banner"/>
+  <video src="./Width_cm_Height_.mp4" width="100%" autoplay loop muted playsinline></video>
 </p>
 
 <!-- Typing Animation Header -->
