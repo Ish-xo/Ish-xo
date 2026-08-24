@@ -1,6 +1,6 @@
 <!-- Banner Image -->
 <p align="center">
-  <video src="./Width_cm_Height_.mp4" width="100%" autoplay loop muted playsinline></video>
+  <video src="https://github.com/Ish-xo/Ish-xo/raw/main/Width_cm_Height_.mp4" width="100%" autoplay loop muted playsinline></video>
 </p>
 
 <!-- Typing Animation Header -->
