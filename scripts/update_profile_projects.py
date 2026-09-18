@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+"""
+Automated GitHub Profile Projects Updater.
+Fetches repository metadata and dynamically updates the Core Projects section in README.md.
+"""
 
 import json
 import os
