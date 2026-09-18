@@ -11,6 +11,13 @@ if hasattr(sys.stdout, "reconfigure"):
 
 GITHUB_USER = os.environ.get("GITHUB_USER", "Ish-xo")
 README_PATH = "README.md"
+CONFIG_PATH = "profile-projects.json"
+
+DEFAULT_PINNED_ICONS = [
+    "py", "js", "ts", "dart", "react", "tailwind",
+    "fastapi", "flutter", "c", "cpp", "java",
+    "github", "vscode", "git", "html", "css"
+]
 
 LANGUAGE_ALIASES = {
     "Python": "py",
@@ -51,6 +58,19 @@ LANGUAGE_ALIASES = {
     "Figma": "figma",
 }
 
+def load_tech_stack_config():
+    if os.path.exists(CONFIG_PATH):
+        try:
+            with open(CONFIG_PATH, "r", encoding="utf-8") as fh:
+                cfg = json.load(fh)
+                ts_cfg = cfg.get("tech_stack", {})
+                pinned = ts_cfg.get("pinned", DEFAULT_PINNED_ICONS)
+                max_icons = ts_cfg.get("max_icons", 24)
+                return pinned, max_icons
+        except Exception as exc:
+            print(f"Warning: Failed to load config from {CONFIG_PATH}: {exc}")
+    return DEFAULT_PINNED_ICONS, 24
+
 def fetch_json(url):
     headers = {
         "Accept": "application/vnd.github+json",
@@ -81,7 +101,7 @@ def collect_languages():
             break
 
         for repo in repos:
-            if repo.get("fork"):
+            if repo.get("fork") or repo.get("private"):
                 continue
             repo_name = repo.get("name")
             if not repo_name:
@@ -137,21 +157,25 @@ def normalize_language(language_name):
         return "bash"
     return None
 
-def build_icon_string(language_sizes):
-    ranked = sorted(language_sizes.items(), key=lambda item: item[1], reverse=True)
+def build_icon_string(language_sizes, pinned_icons, max_icons=24):
     icons = []
     seen = set()
 
+    # 1. First, include all pinned/curated tech stack items (frameworks, tools, languages)
+    for icon in pinned_icons:
+        if icon and icon not in seen:
+            icons.append(icon)
+            seen.add(icon)
+
+    # 2. Next, append any dynamically detected languages from public repos
+    ranked = sorted(language_sizes.items(), key=lambda item: item[1], reverse=True)
     for language_name, _ in ranked:
         icon = normalize_language(language_name)
         if icon and icon not in seen:
             icons.append(icon)
             seen.add(icon)
-        if len(icons) >= 18:
+        if len(icons) >= max_icons:
             break
-
-    if not icons:
-        icons = ["py", "js", "ts", "dart", "react", "tailwind", "fastapi", "flutter", "c", "cpp", "java", "github", "vscode", "git", "html", "css"]
 
     return ",".join(icons)
 
@@ -186,8 +210,9 @@ def update_readme(icon_string):
         fh.write(updated)
 
 def main():
+    pinned_icons, max_icons = load_tech_stack_config()
     language_sizes = collect_languages()
-    icon_string = build_icon_string(language_sizes)
+    icon_string = build_icon_string(language_sizes, pinned_icons, max_icons)
     update_readme(icon_string)
     print(f"Updated profile tech stack icons: {icon_string}")
 

@@ -15,6 +15,27 @@
   ],
   "limit": 4,
   "min_size_kb": 50,
+  "tech_stack": {
+    "pinned": [
+      "py",
+      "js",
+      "ts",
+      "dart",
+      "react",
+      "tailwind",
+      "fastapi",
+      "flutter",
+      "c",
+      "cpp",
+      "java",
+      "github",
+      "vscode",
+      "git",
+      "html",
+      "css"
+    ],
+    "max_icons": 24
+  },
   "custom_titles": {
     "Veda": "Veda",
     "rag-pipeline": "RAG Pipeline",
