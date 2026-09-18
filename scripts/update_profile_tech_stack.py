@@ -3,10 +3,13 @@
 import json
 import os
 import re
+import sys
 from urllib import request, error
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 GITHUB_USER = os.environ.get("GITHUB_USER", "Ish-xo")
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 README_PATH = "README.md"
 
 LANGUAGE_ALIASES = {
@@ -48,19 +51,18 @@ LANGUAGE_ALIASES = {
     "Figma": "figma",
 }
 
-
 def fetch_json(url):
     headers = {
         "Accept": "application/vnd.github+json",
         "User-Agent": "profile-tech-stack-bot",
     }
-    if GITHUB_TOKEN:
-        headers["Authorization"] = f"token {GITHUB_TOKEN}"
+    token = os.environ.get("GITHUB_TOKEN")
+    if token:
+        headers["Authorization"] = f"token {token}"
 
     req = request.Request(url, headers=headers)
     with request.urlopen(req, timeout=30) as response:
         return json.loads(response.read().decode("utf-8"))
-
 
 def collect_languages():
     language_sizes = {}
@@ -85,9 +87,8 @@ def collect_languages():
             if not repo_name:
                 continue
 
-            languages_url = f"https://api.github.com/repos/{GITHUB_USER}/{repo_name}/languages"
             try:
-                repo_languages = fetch_json(languages_url)
+                repo_languages = fetch_json(f"https://api.github.com/repos/{GITHUB_USER}/{repo_name}/languages")
             except error.HTTPError:
                 continue
 
@@ -100,10 +101,10 @@ def collect_languages():
 
     return language_sizes
 
-
 def normalize_language(language_name):
     if not language_name:
         return None
+
     key = language_name.strip()
     alias = LANGUAGE_ALIASES.get(key)
     if alias:
@@ -136,7 +137,6 @@ def normalize_language(language_name):
         return "bash"
     return None
 
-
 def build_icon_string(language_sizes):
     ranked = sorted(language_sizes.items(), key=lambda item: item[1], reverse=True)
     icons = []
@@ -147,7 +147,6 @@ def build_icon_string(language_sizes):
         if icon and icon not in seen:
             icons.append(icon)
             seen.add(icon)
-
         if len(icons) >= 18:
             break
 
@@ -155,7 +154,6 @@ def build_icon_string(language_sizes):
         icons = ["py", "js", "ts", "dart", "react", "tailwind", "fastapi", "flutter", "c", "cpp", "java", "github", "vscode", "git", "html", "css"]
 
     return ",".join(icons)
-
 
 def update_readme(icon_string):
     new_block = (
@@ -187,13 +185,11 @@ def update_readme(icon_string):
     with open(README_PATH, "w", encoding="utf-8") as fh:
         fh.write(updated)
 
-
 def main():
     language_sizes = collect_languages()
     icon_string = build_icon_string(language_sizes)
     update_readme(icon_string)
     print(f"Updated profile tech stack icons: {icon_string}")
-
 
 if __name__ == "__main__":
     main()

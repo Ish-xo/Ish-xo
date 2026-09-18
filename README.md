@@ -35,18 +35,22 @@ I am a passionate **Full Stack Developer** and **AI/ML Enthusiast** studying at 
 
 ### 🛠️ Core Projects
 
-* 🚦 **[Traffic Intersection Intelligent System](https://github.com/Ish-xo/Traffic_intersection_intelligent_system)**: Transforming standard traffic cameras into smart controllers. Built using YOLOv8, FastAPI, and Python to monitor traffic flow, reduce congestion, and prioritize emergency vehicles in real-time.
+<!-- CORE_PROJECTS_START -->
+* 🚀 **[Veda](https://github.com/Ish-xo/Veda)**: An intelligent multi-modal AI platform engineered for deep contextual understanding and seamless task automation.
+* 🤖 **[RAG Pipeline](https://github.com/Ish-xo/rag-pipeline)**: Production-grade Retrieval-Augmented Generation (RAG) system with semantic chunking, vector database indexing, and LLM-powered context synthesis.
+* 🚦 **[Traffic Intersection Intelligent System](https://github.com/Ish-xo/Traffic_intersection_intelligent_system)**: AI-powered Traffic Intersection Intelligent System! 🚦 Built with Python, YOLOv8, and FastAPI, it turns standard traffic cameras into smart controllers—detecting congestion, tracking flow, and prioritizing emergency vehicles in real-time.
 * 🕳️ **[Pothole Detection & Telemetry System](https://github.com/Ish-xo/Pothole-Detection-Telemetry-System)**: A smart system for detecting road hazards and recording location telemetry to assist civic infrastructure management.
-* 📱 **[Nourish-V](https://github.com/Ish-xo/nourish-v)**: A cross-platform mobile health and wellness application engineered using Dart and Flutter.
-* 🗺️ **[MIT ADT Campus Shortest Route Finder](https://github.com/Ish-xo/MITADT_campus-Shortest-Route-Finder-)**: A graph-based web app utilizing JavaScript to guide campus visitors and students to buildings along the shortest paths.
+<!-- CORE_PROJECTS_END -->
 
 ---
 
 ### 💻 Tech Stack
 
+<!-- TECH_STACK_START -->
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=py,js,ts,dart,react,tailwind,fastapi,flutter,c,cpp,java,github,vscode,git,html,css" alt="My Tech Stack" />
+  <img src="https://skillicons.dev/icons?i=dart,js,py,css,html,cpp,docker,kotlin" alt="My Tech Stack" />
 </p>
+<!-- TECH_STACK_END -->
 
 ---
 

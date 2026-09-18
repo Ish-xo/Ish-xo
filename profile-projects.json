@@ -1,0 +1,45 @@
+{
+  "featured": [
+    "Veda",
+    "rag-pipeline",
+    "Traffic_intersection_intelligent_system",
+    "Pothole-Detection-Telemetry-System"
+  ],
+  "excluded": [
+    "Ish-xo",
+    "Pong_game",
+    "BST-Algorithm-Visualizer-",
+    "MDM-Embeded-Arduino-Projects",
+    "hhgoa26-frameingoa",
+    "tab_graveyard"
+  ],
+  "limit": 4,
+  "min_size_kb": 50,
+  "custom_titles": {
+    "Veda": "Veda",
+    "rag-pipeline": "RAG Pipeline",
+    "Traffic_intersection_intelligent_system": "Traffic Intersection Intelligent System",
+    "Pothole-Detection-Telemetry-System": "Pothole Detection & Telemetry System",
+    "nourish-v": "Nourish-V",
+    "MITADT_campus-Shortest-Route-Finder-": "MIT ADT Campus Shortest Route Finder"
+  },
+  "custom_emojis": {
+    "Veda": "🚀",
+    "rag-pipeline": "🤖",
+    "Traffic_intersection_intelligent_system": "🚦",
+    "Pothole-Detection-Telemetry-System": "🕳️",
+    "nourish-v": "📱",
+    "MITADT_campus-Shortest-Route-Finder-": "🗺️",
+    "ai-auto-prompter-extension": "⚡",
+    "copylink": "🔗",
+    "gesture-control": "👋"
+  },
+  "custom_descriptions": {
+    "Veda": "An intelligent multi-modal AI platform engineered for deep contextual understanding and seamless task automation.",
+    "rag-pipeline": "Production-grade Retrieval-Augmented Generation (RAG) system with semantic chunking, vector database indexing, and LLM-powered context synthesis.",
+    "Traffic_intersection_intelligent_system": "Transforming standard traffic cameras into smart controllers. Built using YOLOv8, FastAPI, and Python to monitor traffic flow, reduce congestion, and prioritize emergency vehicles in real-time.",
+    "Pothole-Detection-Telemetry-System": "A smart system for detecting road hazards and recording location telemetry to assist civic infrastructure management.",
+    "nourish-v": "A cross-platform mobile health and wellness application engineered using Dart and Flutter.",
+    "MITADT_campus-Shortest-Route-Finder-": "A graph-based web app utilizing JavaScript to guide campus visitors and students to buildings along the shortest paths."
+  }
+}
